@@ -311,10 +311,14 @@
 
 /mob/living/simple_animal/hostile/resolve_unarmed_attack(atom/attack_target, list/modifiers)
 	GiveTarget(attack_target)
+<<<<<<< HEAD
 	if(dextrous && (isitem(attack_target) || !combat_mode))
 		return ..()
 	else
 		INVOKE_ASYNC(src, PROC_REF(AttackingTarget), attack_target)
+=======
+	INVOKE_ASYNC(src, PROC_REF(AttackingTarget), attack_target)
+>>>>>>> f110ae0c20d ([MIRROR] Simplemob AttackingTarget Fix [MDB IGNORE] (#24314))
 
 #undef LIVING_UNARMED_ATTACK_BLOCKED
 
