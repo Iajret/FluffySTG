@@ -159,8 +159,26 @@
 /datum/surgery/robot_healing/basic
 	name = "Repair robotic limbs (basic)"
 	healing_step_type = /datum/surgery_step/robot_heal/basic
+<<<<<<< HEAD
 	desc = "A surgical procedure that provides repairs and maintenance to robotic limbs. Is slightly more efficient when the patient is severely damaged."
 	replaced_by = null
+=======
+	replaced_by = /datum/surgery/robot_healing/upgraded
+
+/datum/surgery/robot_healing/upgraded
+	name = "Repair robotic limbs (Adv.)"
+	desc = "A surgical procedure that provides highly effective repairs and maintenance to robotic limbs. Is somewhat more efficient when the patient is severely damaged."
+	healing_step_type = /datum/surgery_step/robot_heal/upgraded
+	replaced_by = /datum/surgery/robot_healing/experimental
+	requires_tech = TRUE
+
+/datum/surgery/robot_healing/experimental
+	name = "Repair robotic limbs (Exp.)"
+	desc = "A surgical procedure that quickly provides highly effective repairs and maintenance to robotic limbs. Is moderately more efficient when the patient is severely damaged."
+	healing_step_type = /datum/surgery_step/robot_heal/experimental
+	replaced_by = null
+	requires_tech = TRUE
+>>>>>>> 750ae7dcbd9 ([MODULAR] [NO GBP] Fixes exp. robotic tend wounds being invisible (#24307))
 
 /***************************STEPS***************************/
 
