@@ -50,7 +50,17 @@
 
 /obj/item/clothing/mask/paper/reskin_obj(mob/user)
 	. = ..()
+<<<<<<< HEAD
 	user.update_worn_mask()
+=======
+
+	var/mob/living/carbon/carbon_user
+	if(iscarbon(user))
+		carbon_user = user
+	if(carbon_user && carbon_user.wear_mask == src)
+		carbon_user.update_worn_mask()
+
+>>>>>>> e4894f93571 ([MIRROR] Fixes Monkey's Delight recipe  no good boy point [MDB IGNORE] (#24331))
 	current_skin = null //so we can infinitely reskin
 
 /obj/item/clothing/mask/paper/proc/adjust_mask(mob/living/carbon/human/user)
