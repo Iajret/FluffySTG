@@ -124,9 +124,15 @@ GLOBAL_LIST_INIT(loadout_miscunders, generate_loadout_items(/datum/loadout_item/
 	item_path = /obj/item/clothing/under/rank/security/peacekeeper/trousers
 	restricted_roles = list(JOB_SECURITY_OFFICER, JOB_WARDEN, JOB_HEAD_OF_SECURITY)
 
+<<<<<<< HEAD
 /datum/loadout_item/under/jumpsuit/solofficer
 	name = "Sol Officer Uniform"
 	item_path = /obj/item/clothing/under/rank/security/peacekeeper/sol
+=======
+/datum/loadout_item/under/jumpsuit/security_peacekeeper
+	name = "Security Peacekeeper Uniform"
+	item_path = /obj/item/clothing/under/rank/security/peacekeeper
+>>>>>>> 517e9f8cc5d (puts the newly resprited peacekeeper uniform in the sec clothes vendor and loadout, bc i forgot (#24385))
 	restricted_roles = list(JOB_SECURITY_OFFICER, JOB_WARDEN, JOB_HEAD_OF_SECURITY)
 
 /datum/loadout_item/under/jumpsuit/disco
