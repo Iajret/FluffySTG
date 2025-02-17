@@ -403,6 +403,7 @@ GLOBAL_VAR_INIT(fax_autoprinting, FALSE)
 	INVOKE_ASYNC(src, PROC_REF(animate_object_travel), loaded, "fax_receive", find_overlay_state(loaded, "receive"))
 	say("Received correspondence from [sender_name].")
 	history_add("Receive", sender_name)
+	SEND_SIGNAL(src, COMSIG_FAX_MESSAGE_RECEIVED, loaded, sender_name)
 	addtimer(CALLBACK(src, PROC_REF(vend_item), loaded), 1.9 SECONDS)
 
 /**
